@@ -1,0 +1,107 @@
+body{
+    margin: 0 0;
+}
+
+/* Шапка */
+.header {
+  background: var(--Unnamed-Color, #fff);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.header__inner {
+  width: 100%;
+  max-width: 1140px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 123px;
+  box-sizing: border-box;
+}
+.header__logo {
+  width: 70px;
+  height: 70px;
+}
+
+.menu {
+  margin: 0 0;
+  padding: 0 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+  box-sizing: border-box;
+  /* Текст */
+  color: #292d32;
+  text-align: right;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.header__menu {
+    margin-left: 60px;
+  }
+
+.header__search-icon {
+  margin-left: 50px;
+}
+
+.icons-list {
+  margin: 0 0;
+  padding: 0 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+.header__icons-list {
+  margin-left: auto;
+}
+
+.icon {
+  position: relative;
+  height: 49px;
+  width: 49px;
+  border-radius: 50%;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.shopping-bag__quantity {
+  width: 16px;
+  height: 16px;
+  margin: 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #48a4eb;
+  position: absolute;
+  right: 4px;
+  top: 0;
+  border-radius: 50%;
+  color: var(--Unnamed-Color, #fff);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
