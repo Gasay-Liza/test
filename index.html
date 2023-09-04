@@ -41,33 +41,48 @@
     </header>
     <main>
       <section class="first-screen">
-        <!-- <p class="first-screen__background-title">
-                
-            </p>
-            <p class="first-screen__subtitle">Новое поступление</p>
-            <p class="first-screen__title">Лучшие товары от компании Dell</p>
-            <div class="first-screen__btn-container">
-                <button class="first-screen__btn btn"></button>
-                <p class="btn__text"></p>
-            </div> -->
+        <div class="first-screen__inner">
+          <div class="first-screen_content">
+            <p class="first-screen__background-title"></p>
+            <div class="first-screen__title-container title-container">
+              <p class="title-container__subtitle">Новое поступление</p>
+              <p class="title-container__title">
+                Лучшие товары от компании Dell
+              </p>
+            </div>
+            <div class="first-screen__btn-container btn-container">
+              <button class="btn-container__btn"></button>
+              <p class="btn-container__text">Подробнее</p>
+            </div>
+          </div>
 
-        <!-- Slider main container -->
-        <div class="swiper">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide"><img class="swiper__image" src="./utils/img/slider-img.png"></div>
-            <div class="swiper-slide"><img class="swiper__image" src="./utils/img/slider-img.png"></div>
-            <div class="swiper-slide"><img class="swiper__image" src="./utils/img/slider-img.png"></div>
-            <div class="swiper-slide"><img class="swiper__image" src="./utils/img/slider-img.png"></div>
-            <div class="swiper-slide"><img class="swiper__image" src="./utils/img/slider-img.png"></div>
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img class="swiper__image" src="./utils/img/slider-img.png" />
+              </div>
+              <div class="swiper-slide">
+                <img class="swiper__image" src="./utils/img/slider-img.png" />
+              </div>
+              <div class="swiper-slide">
+                <img class="swiper__image" src="./utils/img/slider-img.png" />
+              </div>
+              <div class="swiper-slide">
+                <img class="swiper__image" src="./utils/img/slider-img.png" />
+              </div>
+              <div class="swiper-slide">
+                <img class="swiper__image" src="./utils/img/slider-img.png" />
+              </div>
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-next"></div>
           </div>
           <!-- If we need pagination -->
           <div class="swiper-pagination"></div>
-
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
         </div>
       </section>
     </main>
@@ -87,9 +102,7 @@
         // Navigation arrows
         navigation: {
           nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
         },
-
       });
     </script>
   </body>
