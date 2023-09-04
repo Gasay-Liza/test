@@ -1,49 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
     <header class="header">
-        <div class="header__inner">
-            <img class="header__logo" src="./utils/img/logo.svg">
-            <ul class="header__menu menu">
-                <li class="menu__item">
-                    Главная 
-                </li>
-                <li class="menu__item">
-                    Каталог 
-                </li>
-                <li class="menu__item">
-                    Новости
-                </li>
-                <li class="menu__item">
-                    Наш АСЦ 
-                </li>
-                <li class="menu__item">
-                    Контакты
-                </li>
-            </ul>
-            <img class="header__search-icon" src="./utils/img/search.svg">
-            <ul class="header__icons-list icons-list">
-                <li class="icons-list__icon icon icon__person">
-                    <img src="./utils/img/person.svg">
-                </li>
-                <li class="icons-list__icon icon icon__signal">
-                    <img src="./utils/img/signal.svg">
-                </li>
-                <li class="icons-list__icon icon icon__liked">
-                    <img src="./utils/img/heart.svg">
-                </li>
-                <li class="icons-list__icon icon icon__shopping-bag shopping-bag">
-                    <img src="./utils/img/shopping-bag.svg">
-                    <p class="shopping-bag__quantity">3</p>
-                </li>
-            </ul>
-        </div>
+      <div class="header__inner">
+        <img class="header__logo" src="./utils/img/logo.svg" />
+        <ul class="header__menu menu">
+          <li class="menu__item">Главная</li>
+          <li class="menu__item">Каталог</li>
+          <li class="menu__item">Новости</li>
+          <li class="menu__item">Наш АСЦ</li>
+          <li class="menu__item">Контакты</li>
+        </ul>
+        <img class="header__search-icon" src="./utils/img/search.svg" />
+        <ul class="header__icons-list icons-list">
+          <li class="icons-list__icon icon icon__person">
+            <img src="./utils/img/person.svg" />
+          </li>
+          <li class="icons-list__icon icon icon__signal">
+            <img src="./utils/img/signal.svg" />
+          </li>
+          <li class="icons-list__icon icon icon__liked">
+            <img src="./utils/img/heart.svg" />
+          </li>
+          <li class="icons-list__icon icon icon__shopping-bag shopping-bag">
+            <img src="./utils/img/shopping-bag.svg" />
+            <p class="shopping-bag__quantity">3</p>
+          </li>
+        </ul>
+      </div>
     </header>
-</body>
+    <main>
+      <section class="first-screen">
+        <!-- <p class="first-screen__background-title">
+                
+            </p>
+            <p class="first-screen__subtitle">Новое поступление</p>
+            <p class="first-screen__title">Лучшие товары от компании Dell</p>
+            <div class="first-screen__btn-container">
+                <button class="first-screen__btn btn"></button>
+                <p class="btn__text"></p>
+            </div> -->
+
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img class="swiper__image" src="./utils/img/slider-img.png"></div>
+            <div class="swiper-slide"><img class="swiper__image" src="./utils/img/slider-img.png"></div>
+            <div class="swiper-slide"><img class="swiper__image" src="./utils/img/slider-img.png"></div>
+            <div class="swiper-slide"><img class="swiper__image" src="./utils/img/slider-img.png"></div>
+            <div class="swiper-slide"><img class="swiper__image" src="./utils/img/slider-img.png"></div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        dynamicBullets: true,
+        dynamicMainBullets: 1,
+        direction: "horizontal",
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+      });
+    </script>
+  </body>
 </html>

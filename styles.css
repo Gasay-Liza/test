@@ -105,3 +105,33 @@ body{
   font-weight: 700;
   line-height: normal;
 }
+
+/* Свайпер */
+
+.first-screen .swiper{
+    position: relative;
+    width: 557px;
+    height: 555px;
+}
+
+.swiper__image{
+    width: 100%;
+}
+
+.first-screen .swiper-pagination-bullets{
+    position: absolute;
+    width: 100%;
+    max-width: 69px;
+    bottom: 169px;
+    margin-left: auto;
+}
+
+.first-screen .swiper-pagination-bullet{
+    width: 5px;
+    height: 5px;
+}
+
+.first-screen .swiper-pagination-bullet-active{
+    background: #292D32;
+    transform: scale(1.8);
+}
