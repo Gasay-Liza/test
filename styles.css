@@ -14,7 +14,7 @@ body {
 
 .header__inner {
   width: 100%;
-  max-width: 1140px;
+  max-width: 1400px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -122,7 +122,7 @@ body {
 .first-screen__inner {
   position: relative;
   width: 100%;
-  max-width: 1140px;
+  max-width: 1400px;
   display: flex;
   flex-direction: row;
 }
@@ -306,7 +306,7 @@ body {
 .catalog-section__content {
   margin: 164px auto 180px;
   width: 100%;
-  max-width: 1140px;
+  max-width: 1400px;
 }
 
 /* сетка каталога */
@@ -316,7 +316,7 @@ body {
   gap: 40px 40px;
   grid-template-columns: repeat(3, 1fr);
   /* указывает количество столбцов */
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   /* указывает количество строк */
 }
 
@@ -353,7 +353,6 @@ body {
 .catalog-item__btn-container {
   margin-top: 40px;
 }
-
 
 
 .catalog-item__number {
