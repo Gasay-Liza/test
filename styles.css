@@ -22,6 +22,7 @@ body {
   height: 123px;
   box-sizing: border-box;
 }
+
 .header__logo {
   width: 70px;
   height: 70px;
@@ -106,20 +107,29 @@ body {
   line-height: normal;
 }
 
+/* Первый блок */
 .first-screen {
   width: 100%;
+  height: 683px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  box-sizing: border-box;
+  background: var(--Unnamed-Color, #F2F2F2);
+  
 }
 
 .first-screen__inner {
+  position: relative;
   width: 100%;
   max-width: 1140px;
+  display: flex;
+  flex-direction: row;
 }
 
-.first-screen_content {
+.first-screen__content {
+  margin-top: 253px;
+  margin-left: 127px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -127,16 +137,56 @@ body {
 }
 
 .first-screen__background-title {
+  margin: 0 0;
+  position: absolute;
+  top: 97px;
+  left: 0;
+  width: 766.516px;
+  height: 201.6px;
   background-image: url(./utils/img/dell.svg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  z-index: -1;
+  z-index: 1;
 }
+.first-screen__swiper-hint{
+  
+}
+
+.swiper-hint{
+  position: absolute;
+  left: 0;
+  bottom: 158px;
+  display: flex;
+  flex-direction: column-reverse;
+  z-index: 1;
+  width: 25px;
+  height: 168px;
+  gap: 16.5px;
+  
+}
+.swiper-hint__text{
+  margin: 0 0; 
+  color: var(--Unnamed-Color, #838383); 
+  font-family: Roboto; 
+  font-size: 16px; 
+  font-style: normal; 
+  font-weight: 300; 
+  line-height: normal; 
+  white-space: nowrap;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+
+
 
 .title-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  z-index: 10;
 }
 
 .title-container__subtitle {
@@ -148,6 +198,7 @@ body {
   font-weight: 300;
   line-height: 133.687%;
 }
+
 .title-container__title {
   margin: 0 0;
   margin-top: 15px;
@@ -169,7 +220,7 @@ body {
   flex-direction: row;
   gap: 12px;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .btn-container__btn {
@@ -182,6 +233,7 @@ body {
   background-repeat: no-repeat;
   border: none;
 }
+
 .btn-container__text {
   margin: 0 0;
   color: #292d32;
@@ -193,12 +245,12 @@ body {
 }
 
 /* Свайпер */
-
 .first-screen .swiper {
   position: relative;
   width: 557px;
   height: 555px;
   z-index: 1;
+  margin-top: 74px;
 }
 
 .swiper__image {
@@ -230,6 +282,7 @@ body {
   width: 104.5px;
   height: 21px;
 }
+
 .first-screen .swiper-button-next::after {
   content: "";
   width: 104.5px;
