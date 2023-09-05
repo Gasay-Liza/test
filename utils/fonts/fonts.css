@@ -15,3 +15,19 @@
       url('./Roboto-Regular.woff2') format('woff2'),
       url('./Roboto-Regular.woff') format('woff');
   }
+
+  @font-face {
+    font-family: 'Euclid Circular A';
+    font-weight: 300;
+    font-style: normal;
+    src: url('./EuclidCircularA-Light.woff2') format('woff2'),
+         url('./EuclidCircularA-Light.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'Euclid Circular A';
+    src: url('./EuclidCircularA-Bold.woff2') format('woff2'),
+         url('./EuclidCircularA-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }

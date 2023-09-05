@@ -391,3 +391,76 @@ body {
   font-weight: 400;
   line-height: 150%;
 }
+
+/* секция преимущества */
+.advantages {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* блоки преимуществ */
+.advantages-blocks {
+  padding: 0 0;
+  width: 100%;
+  max-width: 1401px;
+  display: grid;
+  gap: 27px;
+  grid-template-columns: repeat(4, 1fr);
+  /* указывает количество столбцов */
+  grid-template-rows: 289px;
+}
+
+/* стили одного блока */
+.advantages-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 30px 15px 35px 30px;
+  background: #292D32;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+/* svg бэкграунда */
+.advantages-block__background-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.advantages-block__image {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #343A41;
+}
+
+.advantages-block__title {
+  margin: 25px 0 0;
+  color: #FFF;
+  font-family: Euclid Circular A;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.advantages-block__subtitle {
+  margin: 13px 0 0;
+  color: #B7B7B7;
+  font-family: Euclid Circular A;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
