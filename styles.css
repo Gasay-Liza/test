@@ -607,17 +607,28 @@ body {
 .contacts-form__inner {
   width: 100%;
   max-width: 1440px;
+  height: 842px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .contacts {
-  padding: 100px 100px 112px;
+  position: relative;
+  padding: 100px 100px 0;
   border-radius: 20px 0px 0px 20px;
   width: 100%;
   max-width: 700px;
   background: #f9f9f9;
   box-sizing: border-box;
+}
+
+.contacts-form__img {
+  position: absolute;
+  top: 142;
+  right: -100px;
+  width: 286px;
+  height: 564.133px;
 }
 
 .contacts__inner {
@@ -713,7 +724,7 @@ body {
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  padding: 100px 0 114px;
+  padding: 100px 0 0;
 }
 
 .form {
@@ -749,7 +760,7 @@ body {
   list-style-type: none;
   padding: 0 0;
   width: 100%;
-  margin-top: 66px;
+  margin: 66px 0 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -809,7 +820,7 @@ body {
 }
 
 .form-container__btn-container {
-  margin-top: 57px;
+  margin-top: 53px;
 
 }
 
