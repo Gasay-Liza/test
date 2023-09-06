@@ -425,8 +425,8 @@
         </div>
       </section>
 
-      <section class="form-container">
-        <div class="form-container__inner">
+      <section class="contacts-form">
+        <div class="contacts-form__inner">
           <div class="contacts">
             <div class="contacts__inner">
               <p class="contacts__title">Наши контакты</p>
@@ -469,8 +469,29 @@
           </div>
           <div class="form-container">
             <form class="form">
-              <p class="form__title"></p>
-              <p class="form__subtitle"></p>
+              <p class="form__title">Оставьте заявку</p>
+              <p class="form__subtitle">Оставьте свой номер, и мы перезвоним Вам.</p>
+              <ul class="form__list">
+                <li class="form__item" >
+                  <label class="form__label" for="name">Ваше имя</label>
+                  <input class="form__input input input__name" name="name" id="name" type="text">
+                </li>
+
+                <li class="form__item" >
+                  <label class="form__label" for="telephone">Номер телефона</label>
+                  <input class="form__input input input__telephone" name="telephone" id="telephone" type="tel">
+                </li>
+               
+                <li class="form__item" >
+                  <label class="form__label" for="comment">Комментарий</label>
+                  <textarea class="form__input input input__comment" name="comment" id="comment" type="text"></textarea>
+                </li>
+
+              </ul>
+              <div class="form-container__btn-container btn-container">
+                <button class="btn-container__btn"></button>
+                <p class="btn-container__text">Заказать</p>
+              </div>
             </form>
           </div>
         </div>
