@@ -49,7 +49,7 @@ body {
   text-transform: uppercase;
 }
 
-.menu__link{
+.menu__link {
   color: #292d32;
   cursor: pointer;
   text-decoration: none;
@@ -112,6 +112,68 @@ body {
   font-weight: 700;
   line-height: normal;
 }
+
+/* Кнопка бургер */
+
+.burger-btn {
+  z-index: 30;
+  position: relative;
+  background: #F9F9F9;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger-btn_active .burger-btn__lines {
+  background-color: transparent;
+}
+.burger-btn_active .burger-btn__lines::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.burger-btn_active .burger-btn__lines::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.burger-btn__lines::before,
+.burger-btn__lines::after,
+.burger-btn__lines {
+  position: absolute;
+  display: flex;
+  width: 18px;
+  height: 1.5px;
+  border-radius: 50%;
+  background: #292D32;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.burger-btn__lines {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.burger-btn__lines::before {
+  content: '';
+  top: -8px;
+}
+
+.burger-btn__lines::after {
+  content: '';
+  top: 8px;
+}
+
 
 /* Первый блок */
 .first-screen {
@@ -506,7 +568,7 @@ body {
 }
 
 .news-item__img {
-  
+
   border-radius: 45px 0px 0px 0px;
   width: 100%;
 }
