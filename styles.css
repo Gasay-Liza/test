@@ -1,20 +1,29 @@
-body {
+.page {
+  position: relative;
   margin: 0 0;
+  height: 100vh;
+  background: #b7b7b7;
 }
 
 /* Шапка */
 .header {
+  position: relative;
   background: var(--Unnamed-Color, #fff);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 100%;
+  min-width: 375px;
+  box-sizing: border-box;
+  z-index: 10;
 }
 
 .header__inner {
+  position: relative;
+  padding: 0 15px;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1430px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -114,14 +123,14 @@ body {
 }
 
 /* Кнопка бургер */
-
 .burger-btn {
   z-index: 30;
   position: relative;
   background: #F9F9F9;
   width: 46px;
   height: 46px;
-  display: flex;
+  display: none;
+  opacity: 0;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -130,10 +139,12 @@ body {
 .burger-btn_active .burger-btn__lines {
   background-color: transparent;
 }
+
 .burger-btn_active .burger-btn__lines::before {
   top: 0;
   transform: rotate(45deg);
 }
+
 .burger-btn_active .burger-btn__lines::after {
   top: 0;
   transform: rotate(-45deg);
@@ -1085,3 +1096,93 @@ body {
 }
 
 .footer__socials {}
+
+
+@media screen and (max-width: 1075px) {
+  .header__search-icon {
+    margin-left: auto;
+  }
+
+  .icons-list {
+    margin-left: 30px;
+  }
+
+  /* Кнопка бургер */
+  .burger-btn {
+    display: flex;
+    opacity: 1;
+  }
+
+  .burger-menu{
+    opacity: 0;
+    padding: 56px 38px 64px ;
+    width: 100%;
+    margin: 0 0;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    top: 123px;
+    right: 0;
+    background: #FFF;
+  }
+
+  .burger-menu_active{
+    display: flex;
+    opacity: 1;
+  }
+
+  .overlay{
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    background: rgba(63, 63, 63, 0.50);
+    height: 100vh;
+    width: 100vw;
+    z-index: 5;
+  }
+  .overlay_active{
+    display: flex;
+  }
+}
+@media screen and (max-width: 767px) {
+
+  .header__inner {
+    height: 90px;
+  }
+
+  .burger-menu{
+    top: 90px;
+  }
+
+  .header__logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon {
+    height: 46px;
+    width: 46px;
+  }
+
+  /* некоторые иконки исчезают */
+  .icon__signal {
+    display: none;
+    opacity: 0;
+  }
+
+  .icon__liked {
+    display: none;
+    opacity: 0;
+  }
+
+  .icons-list {
+    gap: 15px;
+  }
+
+
+
+}
