@@ -16,27 +16,40 @@
     <div class="header__inner">
       <a class="header__logo-link" href="#"><img class="header__logo" src="./utils/img/logo.svg" /></a>
       <ul class="header__menu menu burger-menu">
-        <a class="menu__link" href="#">
-          <li class="menu__item">Главная</li>
-        </a>
-        <a class="menu__link" href="#">
-          <li class="menu__item">Каталог</li>
-        </a>
-        <a class="menu__link" href="#">
-          <li class="menu__item">Новости</li>
-        </a>
-        <a class="menu__link" href="#">
-          <li class="menu__item">Наш АСЦ</li>
-        </a>
-        <a class="menu__link" href="#">
-          <li class="menu__item">Контакты</li>
-        </a>
+        
+          <li class="menu__item"><a class="menu__link" href="#">Главная</a></li>
+        
+        
+          <li class="menu__item"><a class="menu__link" href="#">Каталог</a></li>
+        
+          <li class="menu__item"><a class="menu__link" href="#">Новости</a></li>
+        
+          <li class="menu__item"><a class="menu__link" href="#">Наш АСЦ</a></li>
+        
+          <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
       </ul>
       <img class="header__search-icon" src="./utils/img/search.svg" />
       <ul class="header__icons-list icons-list">
         <li class="icons-list__icon icon icon__person">
           <a class="icon__link" href="#"><img src="./utils/img/person.svg" /></a>
+          <!-- всплывающее окно -->
+          <div class="profile-box">
+            <div class="profile-box__background"></div>
+            <div class="profile-box__title">
+              <div class="profile-box__icon-box">
+                <img class="profile-box__icon" src="./utils/img/person.svg">
+              </div>
+              <p class="profile-box__text">Мария</p>
+            </div>
+            <ul class="profile-box__list">
+              <li class="profile-box__item">Личный кабинет</li>
+              <li class="profile-box__item">История заказов</li>
+              <li class="profile-box__item">Персональные предложения</li>
+              <li class="profile-box__item">Выйти</li>
+            </ul>
+          </div>
         </li>
+        
         <li class="icons-list__icon icon icon__signal">
           <a class="icon__link" href="#"><img src="./utils/img/signal.svg" /></a>
         </li>
