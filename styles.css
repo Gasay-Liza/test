@@ -49,6 +49,12 @@ body {
   text-transform: uppercase;
 }
 
+.menu__link{
+  color: #292d32;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .header__menu {
   margin-left: 60px;
 }
@@ -500,6 +506,7 @@ body {
 }
 
 .news-item__img {
+  
   border-radius: 45px 0px 0px 0px;
   width: 100%;
 }
