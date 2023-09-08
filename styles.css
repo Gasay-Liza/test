@@ -619,47 +619,87 @@
 }
 
 /* секция преимущества */
+
 .advantages {
+  padding-bottom: 46px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
   align-items: center;
+  background: #f2f2f2;
+}
+
+.advantages__img {
+  width: 61%;
+  top: 87px;
+  left: -80px;
+  position: absolute;
+}
+
+.advantages__content {
+  position: relative;
+  width: 100%;
+  max-width: 1430px;
+  min-width: 375px;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.advantages__title-block {
+  width: 49.1%;
+  margin-left: auto;
+  margin: 183px 0 180px auto;
+}
+
+.advantages .title-container {
+  flex-direction: column-reverse;
+}
+
+.advantages .title-container__subtitle {
+  max-width: 518px;
+  margin-top: 37px;
+}
+
+.advantages .title-container__title {
+  max-width: 100%;
+}
+
+.advantages .btn-container {
+  margin-top: 41px;
 }
 
 /* блоки преимуществ */
 .advantages-blocks {
   margin: 0 0;
   padding: 0 0;
-  width: 100%;
-  max-width: 1401px;
   display: grid;
   gap: 27px;
   grid-template-columns: repeat(4, 1fr);
   /* указывает количество столбцов */
-  grid-template-rows: 289px;
+  grid-auto-rows: 289px;
 }
 
 /* стили одного блока */
-.advantages-block {
-  position: relative;
+.advantages-block {  background-image: url(./utils/img/background-line.svg);
+  background-position: right 0 top 0;
+  background-repeat: no-repeat;
+  background-size: 139.5px 90px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   padding: 30px 15px 35px 30px;
-  background: #292d32;
+  background-color: #292d32;
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
-}
-
-/* svg бэкграунда */
-.advantages-block__background-img {
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
 .advantages-block__image {
@@ -673,6 +713,7 @@
 }
 
 .advantages-block__title {
+  position: relative;
   margin: 25px 0 0;
   color: #fff;
   font-family: Euclid Circular A;
@@ -1255,6 +1296,12 @@
 
 .footer__socials {
 }
+@media screen and (max-width: 1700px) {
+  .advantages__img {
+    width: 55%;
+    left: 15px;
+  }
+}
 
 @media screen and (max-width: 1240px) {
   /* Cетка каталога */
@@ -1268,6 +1315,16 @@
   /* отдельный элемент каталога */
   .catalog-item {
     max-width: 100%;
+  }
+
+  /* блоки преимуществ */
+  .advantages-blocks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* стили одного блока */
+  .advantages-block {
+    max-width: 450px;
   }
 }
 
@@ -1320,7 +1377,17 @@
   .overlay_active {
     display: flex;
   }
+
+  .advantages__title-block {
+    margin: 101px 0 179px auto;
+  }
+
+  .advantages__img {
+    width: 55%;
+    left: 15px;
+  }
 }
+
 @media screen and (max-width: 767px) {
   .header__inner {
     height: 90px;
@@ -1374,12 +1441,79 @@
   }
 
   .catalog-section__content {
-    margin: 62px auto 120px ;
+    margin: 62px auto 120px;
+  }
+
+  .advantages__title-block {
+    width: 49.1%;
+    margin-left: auto;
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 680px) {
+  .advantages__img {
+    width: 345px;
+    top: 283px;
+    right: -11%;
+    left: auto;
+  }
 
+  .advantages__title-block {
+    width: 100%;
+    max-width: 440px;
+    margin: 101px 0 179px;
+  }
+
+  .advantages .title-container__subtitle {
+    margin-top: 20px;
+  }
+
+  .advantages .title-container__title {
+    font-size: 30px
+  }
+
+  .advantages .btn-container {
+    margin-top: 30px;
+  }
+
+  .advantages{
+    padding-bottom: 115px;
+  }
+  /* блоки преимуществ */
+  .advantages-blocks {
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 214px;
+  }
+
+  /* стили одного блока */
+  .advantages-block {
+    max-width: 440px;
+    background-size: 121px 64px;
+    padding: 15px 11px 18px 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+
+  .advantages-block__image {
+    width: 50px;
+    height: 50px;
+    border-radius: 9px;
+  }
+
+  .advantages-block__title {
+    margin: 15px 0 0;
+    font-size: 18px;
+  }
+
+  .advantages-block__subtitle {
+    margin: 10px 0 0;
+  }
+}
+@media screen and (max-width: 450px) {
   .title-container__subtitle {
     font-size: 15px;
     line-height: 150%;
@@ -1426,7 +1560,6 @@
     justify-content: flex-end;
     padding: 0 0 20px;
   }
-
 
   /* контейнер с заголовком и подзаголовком секции*/
   .catalog__title-container {
