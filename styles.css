@@ -5,6 +5,21 @@
   background: #b7b7b7;
 }
 
+.overlay{
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  background: rgba(63, 63, 63, 0.50);
+  height: 100vh;
+  width: 100vw;
+  z-index: 5;
+}
+.overlay_active{
+  display: flex;
+}
+
 /* Шапка */
 .header {
   position: relative;
@@ -1133,20 +1148,7 @@
     opacity: 1;
   }
 
-  .overlay{
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 0;
-    opacity: 1;
-    background: rgba(63, 63, 63, 0.50);
-    height: 100vh;
-    width: 100vw;
-    z-index: 5;
-  }
-  .overlay_active{
-    display: flex;
-  }
+  
 }
 @media screen and (max-width: 767px) {
 
