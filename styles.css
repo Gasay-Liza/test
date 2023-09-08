@@ -115,7 +115,7 @@
   justify-content: center;
 }
 
-.icon__person {
+.icon_type_person {
   position: relative;
 }
 
@@ -143,7 +143,7 @@
 }
 
 
-.icon__person:hover .profile-box{
+.icon_type_person:hover .profile-box{
   opacity: 1;
   left: -190.5px;
   display: flex;
@@ -1275,7 +1275,7 @@
     height: 90px;
   }
 
-  .icon__person:hover .profile-box {
+  .icon_type_person:hover .profile-box {
     left: -9999px;
     opacity: 0;
   }
@@ -1295,12 +1295,12 @@
   }
 
   /* некоторые иконки исчезают */
-  .icon__signal {
+  .icon_type_signal {
     display: none;
     opacity: 0;
   }
 
-  .icon__liked {
+  .icon_type_liked {
     display: none;
     opacity: 0;
   }
