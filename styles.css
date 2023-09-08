@@ -1372,6 +1372,10 @@
   .catalog-item {
     max-width: 440px;
   }
+
+  .catalog-section__content {
+    margin: 62px auto 120px ;
+  }
 }
 
 @media screen and (max-width: 450px) {
