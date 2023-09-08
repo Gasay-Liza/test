@@ -70,9 +70,75 @@
           </a>
         </li>
       </ul>
-
     </div>
   </header>
+  <main>
+    <!-- Секция с каталогом -->
+    <section class="catalog-section">
+      <div class="catalog-section__content">
+        <ul class="catalog">
+          <li class="catalog-item catalog-item_type_description">
+            <div class="catalog__title-container title-container">
+              <p class="title-container__subtitle">
+                Наша компания является зарегистрированным и официальным
+                партнером Dell в России.
+              </p>
+              <p class="title-container__title">Каталог товаров от Dell</p>
+            </div>
+            <div class="catalog-item__btn-container btn-container">
+              <button class="btn-container__btn"></button>
+              <p class="btn-container__text">В каталог</p>
+            </div>
+          </li>
+
+          <li class="catalog-item">
+            <div class="catalog-item__number">01</div>
+            <img class="catalog-item__img catalog-item__img_type_desktop" alt="Фотография: Ноутбук Dell" src="./utils/img/catalog-desktop.png"/>
+            <div class="catalog-item__title-container">
+              <p class="catalog-item__subtitle">105 товаров</p>
+              <p class="catalog-item__title">Ноутбуки</p>
+            </div>
+          </li>
+
+          <li class="catalog-item">
+            <div class="catalog-item__number">02</div>
+            <img class="catalog-item__img catalog-item__img_type_pc" alt="Фотография: Персональный компьютер Dell" src="./utils/img/catalog-pc.png"/>
+            <div class="catalog-item__title-container">
+              <p class="catalog-item__subtitle">65 товаров</p>
+              <p class="catalog-item__title">Персональные компьютеры</p>
+            </div>
+          </li>
+
+          <li class="catalog-item">
+            <div class="catalog-item__number">03</div>
+            <img class="catalog-item__img catalog-item__img_type_server" alt="Фотография: Сервер Dell" src="./utils/img/catalog-server.png"/>
+            <div class="catalog-item__title-container">
+              <p class="catalog-item__subtitle">13 товаров</p>
+              <p class="catalog-item__title">Cерверы</p>
+            </div>
+          </li>
+
+          <li class="catalog-item">
+            <div class="catalog-item__number">04</div>
+            <img class="catalog-item__img catalog-item__img_type_emc" alt="Фотография: Dell EMC" src="./utils/img/catalog-emc.png"/>
+            <div class="catalog-item__title-container">
+              <p class="catalog-item__subtitle">2345 товаров</p>
+              <p class="catalog-item__title">Dell EMC</p>
+            </div>
+          </li>
+
+          <li class="catalog-item">
+            <div class="catalog-item__number">05</div>
+            <img class="catalog-item__img catalog-item__img_type_emc-parts" alt="Фотография: Запасные части к Dell EMC" src="./utils/img/catalog-emc1.png"/>
+            <div class="catalog-item__title-container">
+              <p class="catalog-item__subtitle">195 товаров</p>
+              <p class="catalog-item__title">Запасные части к Dell EMC</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
   <script>
     let header = document.querySelector('.header');
     let burgerBtn = header.querySelector('.burger-btn');

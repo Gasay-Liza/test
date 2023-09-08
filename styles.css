@@ -1,29 +1,27 @@
 .page {
   position: relative;
   margin: 0 0;
-  height: 100vh;
-  background: #b7b7b7;
 }
 
-.overlay{
+.overlay {
   position: absolute;
   display: none;
   top: 0;
   left: 0;
   opacity: 1;
-  background: rgba(63, 63, 63, 0.50);
+  background: rgba(63, 63, 63, 0.5);
   height: 100vh;
   width: 100vw;
   z-index: 5;
 }
-.overlay_active{
+.overlay_active {
   display: flex;
 }
 
 /* Шапка */
 .header {
   position: relative;
-  background: var(--Unnamed-Color, #FFF);
+  background: var(--Unnamed-Color, #fff);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -119,7 +117,7 @@
   position: relative;
 }
 
-.hover-box{
+.hover-box {
   position: absolute;
   left: -80px;
   top: 40px;
@@ -142,8 +140,7 @@
   flex-direction: column;
 }
 
-
-.icon_type_person:hover .profile-box{
+.icon_type_person:hover .profile-box {
   opacity: 1;
   left: -190.5px;
   display: flex;
@@ -159,8 +156,8 @@
   flex-shrink: 0;
   border-radius: 2px;
   background: #fff;
-  border-top: 3px solid #F9F9F9;
-  border-left: 3px solid #F9F9F9;
+  border-top: 3px solid #f9f9f9;
+  border-left: 3px solid #f9f9f9;
 }
 
 .profile-box__title {
@@ -183,7 +180,7 @@
   height: 49px;
   width: 49px;
   border-radius: 50%;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -384,6 +381,7 @@
 
 .title-container__subtitle {
   margin: 0 0;
+  max-width: 380px;
   color: var(--Unnamed-Color, #838383);
   font-family: Roboto;
   font-size: 18px;
@@ -395,6 +393,7 @@
 .title-container__title {
   margin: 0 0;
   width: 100%;
+  max-width: 380px;
   color: #292d32;
   font-family: Roboto;
   font-size: 50px;
@@ -485,7 +484,6 @@
 }
 
 /* Каталог */
-
 .catalog-section {
   width: 100%;
   display: flex;
@@ -497,13 +495,17 @@
 .catalog-section__content {
   margin: 164px auto 180px;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1430px;
+  min-width: 375px;
 }
 
-/* сетка каталога */
+/* Cетка каталога */
 .catalog {
-  padding: 0 0;
+  margin: 0 0;
+  padding: 0 15px;
   display: grid;
+  align-items: center;
+  justify-items: center;
   gap: 40px 40px;
   grid-template-columns: repeat(3, 1fr);
   /* указывает количество столбцов */
@@ -513,6 +515,7 @@
 
 /* отдельный элемент каталога */
 .catalog-item {
+  position: relative;
   width: 100%;
   max-width: 440px;
   height: 371px;
@@ -526,7 +529,7 @@
 }
 
 /* первый блок каталога с описанием */
-.catalog-item__description {
+.catalog-item_type_description {
   padding: 0 0;
   background: var(--Unnamed-Color, #fff);
   justify-content: flex-start;
@@ -541,7 +544,7 @@
 
 /* контейнер с кнопкой и текстом */
 .catalog-item__btn-container {
-  margin-top: 40px;
+  margin-top: 46px;
 }
 
 .catalog-item__number {
@@ -554,12 +557,45 @@
 }
 
 .catalog-item__img {
+  position: absolute;
+}
+
+.catalog-item__img_type_desktop {
+  transform: scaleX(-1);
+  width: 95%;
+  max-width: 415px;
+  bottom: 136px;
+  left: 12px;
+}
+.catalog-item__img_type_pc {
+  width: 61%;
+  max-width: 267px;
+  bottom: 148px;
+  left: 115px;
+}
+.catalog-item__img_type_server {
+  width: 77%;
+  max-width: 337px;
+  bottom: 153px;
+  left: 51px;
+}
+.catalog-item__img_type_emc {
+  width: 66%;
+  max-width: 289px;
+  bottom: 153px;
+  left: 75px;
+}
+.catalog-item__img_type_emc-parts {
+  width: 73%;
+  max-width: 323px;
+  bottom: 120px;
+  left: 87px;
 }
 
 .catalog-item__title-container {
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 5px;
 }
 
 .catalog-item__subtitle {
@@ -1220,6 +1256,21 @@
 .footer__socials {
 }
 
+@media screen and (max-width: 1240px) {
+  /* Cетка каталога */
+  .catalog {
+    grid-template-columns: repeat(2, 1fr);
+    /* указывает количество столбцов */
+    grid-template-rows: repeat(3, 1fr);
+    /* указывает количество строк */
+  }
+
+  /* отдельный элемент каталога */
+  .catalog-item {
+    max-width: 100%;
+  }
+}
+
 @media screen and (max-width: 1075px) {
   .header__search-icon {
     margin-left: auto;
@@ -1254,7 +1305,7 @@
     display: flex;
     opacity: 1;
   }
-  
+
   .overlay {
     position: absolute;
     display: none;
@@ -1307,5 +1358,120 @@
 
   .icons-list {
     gap: 15px;
+  }
+
+  /* Cетка каталога */
+  .catalog {
+    grid-template-columns: repeat(1, 1fr);
+    /* указывает количество столбцов */
+    grid-template-rows: auto;
+    /* указывает количество строк */
+  }
+
+  /* отдельный элемент каталога */
+  .catalog-item {
+    max-width: 440px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+
+  .title-container__subtitle {
+    font-size: 15px;
+    line-height: 150%;
+  }
+
+  .catalog .title-container__title {
+    font-size: 30px;
+    max-width: 249px;
+  }
+
+  .first-screen__btn-container {
+    margin-top: 60px;
+  }
+
+  .btn-container {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .btn-container__btn {
+    width: 45px;
+    height: 45px;
+  }
+
+  .btn-container__text {
+    font-size: 15px;
+  }
+
+  /* отдельный элемент каталога */
+  .catalog {
+    gap: 20px;
+  }
+
+  .catalog-item {
+    height: 290px;
+    border-radius: 10px;
+    padding: 20px 20px;
+  }
+
+  .catalog-item_type_description {
+    justify-content: flex-end;
+    padding: 0 0 20px;
+  }
+
+
+  /* контейнер с заголовком и подзаголовком секции*/
+  .catalog__title-container {
+    gap: 20px;
+  }
+
+  /* контейнер с кнопкой и текстом */
+  .catalog-item__btn-container {
+    margin-top: 30px;
+  }
+
+  .catalog-item__number {
+    font-size: 20px;
+  }
+
+  .catalog-item__title-container {
+    gap: 0;
+  }
+
+  .catalog-item__subtitle {
+    font-size: 15px;
+  }
+
+  .catalog-item__title {
+    font-size: 20px;
+  }
+
+  .catalog-item__img_type_desktop {
+    width: 87.5%;
+    bottom: 82px;
+    left: 21px;
+  }
+
+  .catalog-item__img_type_pc {
+    bottom: 88px;
+    left: 99px;
+  }
+
+  .catalog-item__img_type_server {
+    bottom: 120px;
+    left: 40px;
+  }
+  .catalog-item__img_type_emc {
+    bottom: 100px;
+    left: 59px;
+  }
+
+  .catalog-item__img_type_emc-parts {
+    bottom: 94px;
+    left: 68px;
   }
 }
