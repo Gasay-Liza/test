@@ -623,6 +623,8 @@
       overlay.addEventListener("click", () => toggleMenu());
 
       function toggleMenu() {
+
+        header.classList.toggle("header_fixed");
         burgerBtn.classList.toggle("burger-btn_active");
 
         burgerMenu.classList.toggle("burger-menu_active");
