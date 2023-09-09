@@ -623,7 +623,6 @@
 .advantages {
   padding-bottom: 46px;
   width: 100%;
-  max-width: 1430px;
   min-width: 375px;
   display: flex;
   flex-direction: column;
@@ -644,13 +643,13 @@
   position: relative;
   width: 100%;
   max-width: 1430px;
-  min-width: 375px;
   padding: 0 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .advantages__title-block {
@@ -801,7 +800,7 @@
 }
 
 .news-item__img {
-  border-radius: 45px 0px 0px 0px;
+  border-radius: 45px 0 0 0;
   width: 100%;
   height: 280px;
 }
@@ -868,7 +867,7 @@
   height: 97px;
   border-radius: 15px;
   background: #fff;
-  box-shadow: 6px 6px 30px 0px rgba(0, 0, 0, 0.06);
+  box-shadow: 6px 6px 30px 0 rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -930,7 +929,7 @@
 
 /* стили формы */
 .contacts-form {
-  margin-top: 180px;
+  min-width: 375px;
   width: 100%;
   background: transparent;
   display: flex;
@@ -940,27 +939,32 @@
 }
 
 .contacts-form__inner {
+  padding: 0 15px;
   width: 100%;
   max-width: 1440px;
   height: 842px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .contacts {
   position: relative;
-  padding: 100px 100px 0;
-  border-radius: 20px 0px 0px 20px;
+  padding: 100px 7.1% 0;
+  border-radius: 20px 0 0 20px;
   width: 100%;
+  height: 842px;
   max-width: 700px;
   background: #f9f9f9;
+  display: flex;
   box-sizing: border-box;
 }
 
 .contacts-form__img {
   position: absolute;
-  top: 142;
+  top: 142px;
   right: -100px;
   width: 286px;
   height: 564.133px;
@@ -1005,6 +1009,11 @@
   display: flex;
   flex-direction: row;
   gap: 18px;
+}
+
+.contact__icon {
+  width: 36px;
+  height: 36px;
 }
 
 .contacts__location {
@@ -1054,18 +1063,17 @@
 .form-container {
   width: 100%;
   max-width: 700px;
-  border-radius: 0px 20px 20px 0px;
+  border-radius: 0 20px 20px 0px;
   background: #292d32;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  padding: 100px 0 0;
+  padding: 100px 9.7% 100px 9.2%;
 }
 
 .form {
   width: 100%;
-  max-width: 436px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -1142,15 +1150,15 @@
   line-height: 30px;
 }
 
-.input__name {
+.input_name {
   height: 61px;
 }
 
-.input__telephone {
+.input_telephone {
   height: 61px;
 }
 
-.input__comment {
+.input_comment {
   padding: 15px 15px;
   height: 147px;
 }
@@ -1350,6 +1358,11 @@
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 364px;
   }
+
+  .contacts-form__img {
+    top: 290px;
+    right: -104px;
+  }
 }
 
 @media screen and (max-width: 1240px) {
@@ -1374,6 +1387,38 @@
   /* стили одного блока */
   .advantages-block {
     max-width: 450px;
+  }
+
+  .contacts-form__inner {
+    padding: 0 15px;
+    width: 100%;
+    max-width: 1440px;
+    height: 842px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .contacts-form__inner {
+    height: auto;
+  }
+
+  .contacts {
+    padding: 100px 100px;
+    border-radius: 20px 20px 0 0;
+    max-width: 900px;
+  }
+  .form-container {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 0 0 20px 20px;
+    padding: 100px 100px;
+  }
+
+  .contacts-form__img {
+    top: 236px;
+    right: 35px;
   }
 }
 
@@ -1434,6 +1479,10 @@
   .advantages__img {
     width: 55%;
     left: 15px;
+  }
+
+  .contacts-form__inner {
+    padding: 0 0;
   }
 }
 
@@ -1506,6 +1555,15 @@
     width: 49.1%;
     margin-left: auto;
   }
+
+  /* фотография формы */
+  .contacts-form__img {
+    position: absolute;
+    top: 359px;
+    right: 10px;
+    width: 241px;
+    height: 442.133px;
+  }
 }
 
 @media screen and (max-width: 680px) {
@@ -1570,6 +1628,103 @@
   .advantages-block__subtitle {
     margin: 10px 0 0;
   }
+
+  /* Форма */
+
+  .contacts {
+    padding: 100px 8% 60px;
+    border-radius: 0;
+    width: 100%;
+    height: auto;
+  }
+  .contacts__title {
+    font-size: 30px;
+  }
+
+  .contacts__subtitle {
+    margin-top: 15px;
+    font-size: 15px;
+  }
+
+  .contact__icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .contact__title {
+    margin-top: 0;
+    font-size: 15px;
+  }
+
+  .contact__text {
+    margin-top: 0;
+    font-size: 18px;
+  }
+
+  .contacts__list {
+    margin-top: 40px;
+  }
+
+  .contacts__email {
+    margin-top: 30px;
+  }
+
+  .contacts__telephone {
+    margin-top: 30px;
+  }
+
+  .contact__telephone-text {
+    max-width: 145px;
+}
+
+  .contacts__socials {
+    margin-top: 30px;
+  }
+  .contacts-form__img {
+    width: 116px;
+    height: 256.781px;
+    transform: rotate(15deg);
+    right: 62px;
+    top: auto;
+    bottom: -46px;
+  }
+
+  .form-container {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 0 0;
+    padding: 60px 8%;
+}
+
+.form__title {
+  font-size: 30px;
+}
+
+.form__subtitle {
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+.form__list {
+  margin: 40px 0 0;
+}
+
+.form__label {
+  padding: 0 10px;
+  font-size: 15px;
+}
+
+.form__item {
+  margin-top: 40px;
+}
+
+.form-container__btn-container {
+  margin-top: 30px;
+}
+
+.form-container__btn-container .btn-container__text {
+  font-size: 15px;
+}
 }
 @media screen and (max-width: 450px) {
   .title-container__subtitle {
@@ -1686,7 +1841,7 @@
     position: relative;
     background-color: transparent;
     filter: drop-shadow(0px 40px 80px rgba(0, 0, 0, 0.05));
-    border-radius: 0px 0px 45px 0px;
+    border-radius: 0 0 45px 0px;
   }
 
   .news-item__img {
