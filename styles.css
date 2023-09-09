@@ -331,6 +331,7 @@
   flex-direction: column;
   width: 100%;
   max-width: 446px;
+  z-index: 10;
 }
 
 .first-screen__background-title {
