@@ -1,245 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./utils/fonts/fonts.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="./styles.css" />
-  <link rel="stylesheet" href="./utils/fonts/fonts.css" />
-</head>
-
-<body class="page">
-  <!-- overlay burger-menu -->
-  <div class="overlay"></div>
-  <!-- header -->
-  <header class="header">
-    <div class="header__inner">
-      <a class="header__logo-link" href="#"><img class="header__logo" src="./utils/img/logo.svg" /></a>
-      <ul class="header__menu menu burger-menu">
-        
+  <body class="page">
+    <!-- overlay burger-menu -->
+    <div class="overlay"></div>
+    <!-- header -->
+    <header class="header">
+      <div class="header__inner">
+        <a class="header__logo-link" href="#"
+          ><img class="header__logo" src="./utils/img/logo.svg"
+        /></a>
+        <ul class="header__menu menu burger-menu">
           <li class="menu__item"><a class="menu__link" href="#">Главная</a></li>
-        
+
           <li class="menu__item"><a class="menu__link" href="#">Каталог</a></li>
-        
+
           <li class="menu__item"><a class="menu__link" href="#">Новости</a></li>
-        
+
           <li class="menu__item"><a class="menu__link" href="#">Наш АСЦ</a></li>
-        
-          <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
-      </ul>
-      <img class="header__search-icon" src="./utils/img/search.svg" />
-      <ul class="header__icons-list icons-list">
-        <li class="icons-list__icon icon icon_type_person">
-          <div class="hover-box"></div>
-          <a class="icon__link" href="#"><img src="./utils/img/person.svg" /></a>
-          <!-- всплывающее окно -->
-          <div class="profile-box">
-            <div class="profile-box__background"></div>
-            <div class="profile-box__title">
-              <div class="profile-box__icon-box">
-                <img class="profile-box__icon" src="./utils/img/person.svg">
+
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+        <img class="header__search-icon" src="./utils/img/search.svg" />
+        <ul class="header__icons-list icons-list">
+          <li class="icons-list__icon icon icon_type_person">
+            <div class="hover-box"></div>
+            <a class="icon__link" href="#"
+              ><img src="./utils/img/person.svg"
+            /></a>
+            <!-- всплывающее окно -->
+            <div class="profile-box">
+              <div class="profile-box__background"></div>
+              <div class="profile-box__title">
+                <div class="profile-box__icon-box">
+                  <img class="profile-box__icon" src="./utils/img/person.svg" />
+                </div>
+                <p class="profile-box__text">Мария</p>
               </div>
-              <p class="profile-box__text">Мария</p>
+              <ul class="profile-box__list">
+                <li class="profile-box__item">Личный кабинет</li>
+                <li class="profile-box__item">История заказов</li>
+                <li class="profile-box__item">Персональные предложения</li>
+                <li class="profile-box__item">Выйти</li>
+              </ul>
             </div>
-            <ul class="profile-box__list">
-              <li class="profile-box__item">Личный кабинет</li>
-              <li class="profile-box__item">История заказов</li>
-              <li class="profile-box__item">Персональные предложения</li>
-              <li class="profile-box__item">Выйти</li>
+          </li>
+
+          <li class="icons-list__icon icon icon_type_signal">
+            <a class="icon__link" href="#"
+              ><img src="./utils/img/signal.svg"
+            /></a>
+          </li>
+          <li class="icons-list__icon icon icon_type_liked">
+            <a class="icon__link" href="#"
+              ><img src="./utils/img/heart.svg"
+            /></a>
+          </li>
+          <li class="icons-list__icon icon icon_type_shopping-bag shopping-bag">
+            <a class="icon__link" href="#"
+              ><img src="./utils/img/shopping-bag.svg" />
+              <p class="shopping-bag__quantity">3</p>
+            </a>
+          </li>
+          <li class="icons-list__icon icon icon_type_burger-btn burger-btn">
+            <a class="icon__link" href="#">
+              <span class="burger-btn__lines"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <!-- Секция с каталогом -->
+      <section class="catalog-section">
+        <div class="catalog-section__content">
+          <ul class="catalog">
+            <li class="catalog-item catalog-item_type_description">
+              <div class="catalog__title-container title-container">
+                <p class="title-container__subtitle">
+                  Наша компания является зарегистрированным и официальным
+                  партнером Dell в России.
+                </p>
+                <p class="title-container__title">Каталог товаров от Dell</p>
+              </div>
+              <div class="catalog-item__btn-container btn-container">
+                <button class="btn-container__btn"></button>
+                <p class="btn-container__text">В каталог</p>
+              </div>
+            </li>
+
+            <li class="catalog-item">
+              <div class="catalog-item__number">01</div>
+              <img
+                class="catalog-item__img catalog-item__img_type_desktop"
+                alt="Фотография: Ноутбук Dell"
+                src="./utils/img/catalog-desktop.png"
+              />
+              <div class="catalog-item__title-container">
+                <p class="catalog-item__subtitle">105 товаров</p>
+                <p class="catalog-item__title">Ноутбуки</p>
+              </div>
+            </li>
+
+            <li class="catalog-item">
+              <div class="catalog-item__number">02</div>
+              <img
+                class="catalog-item__img catalog-item__img_type_pc"
+                alt="Фотография: Персональный компьютер Dell"
+                src="./utils/img/catalog-pc.png"
+              />
+              <div class="catalog-item__title-container">
+                <p class="catalog-item__subtitle">65 товаров</p>
+                <p class="catalog-item__title">Персональные компьютеры</p>
+              </div>
+            </li>
+
+            <li class="catalog-item">
+              <div class="catalog-item__number">03</div>
+              <img
+                class="catalog-item__img catalog-item__img_type_server"
+                alt="Фотография: Сервер Dell"
+                src="./utils/img/catalog-server.png"
+              />
+              <div class="catalog-item__title-container">
+                <p class="catalog-item__subtitle">13 товаров</p>
+                <p class="catalog-item__title">Cерверы</p>
+              </div>
+            </li>
+
+            <li class="catalog-item">
+              <div class="catalog-item__number">04</div>
+              <img
+                class="catalog-item__img catalog-item__img_type_emc"
+                alt="Фотография: Dell EMC"
+                src="./utils/img/catalog-emc.png"
+              />
+              <div class="catalog-item__title-container">
+                <p class="catalog-item__subtitle">2345 товаров</p>
+                <p class="catalog-item__title">Dell EMC</p>
+              </div>
+            </li>
+
+            <li class="catalog-item">
+              <div class="catalog-item__number">05</div>
+              <img
+                class="catalog-item__img catalog-item__img_type_emc-parts"
+                alt="Фотография: Запасные части к Dell EMC"
+                src="./utils/img/catalog-emc1.png"
+              />
+              <div class="catalog-item__title-container">
+                <p class="catalog-item__subtitle">195 товаров</p>
+                <p class="catalog-item__title">Запасные части к Dell EMC</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="advantages">
+        <div class="advantages__content">
+          <img
+            class="advantages__img"
+            src="./utils/img/desktop.png"
+            alt="Фотография ноутбука Dell"
+          />
+          <div class="advantages__title-block">
+            <div class="title-container">
+              <p class="title-container__subtitle">
+                Оптимизация мощностей (расходов, социальных выплат и&nbsp;т.п.)
+                позволили компании на&nbsp;4,7% понизить цены по&nbsp;сравнению
+                с&nbsp;конкурентами
+              </p>
+              <p class="title-container__title">Наши преимущества</p>
+            </div>
+            <div class="btn-container">
+              <button class="btn-container__btn"></button>
+              <p class="btn-container__text">Оставить заявку</p>
+            </div>
+          </div>
+
+          <ul class="advantages-blocks">
+            <li class="advantages-block">
+              <div class="advantages-block__image">
+                <img
+                  class="advantages-block__icon"
+                  src="./utils/img/icons/card-pos.svg"
+                />
+              </div>
+              <p class="advantages-block__title">
+                Самые выгодные и низкие цены
+              </p>
+              <p class="advantages-block__subtitle">
+                В&nbsp;наличии широкий ассортимент, а&nbsp;также доступные цены на
+ноутбуки Dell
+              </p>
+            </li>
+
+            <li class="advantages-block">
+              <div class="advantages-block__image">
+                <img
+                  class="advantages-block__icon"
+                  src="./utils/img/icons/ok.svg"
+                />
+              </div>
+              <p class="advantages-block__title">
+                Авторизованный сервисный центр DELL
+              </p>
+              <p class="advantages-block__subtitle">
+                Сертифицированный сервисный центр по&nbsp;ремонту техники Dell
+в&nbsp;России и&nbsp;странах СНГ
+              </p>
+            </li>
+
+            <li class="advantages-block">
+              <div class="advantages-block__image">
+                <img
+                  class="advantages-block__icon"
+                  src="./utils/img/icons/people.svg"
+                />
+              </div>
+              <p class="advantages-block__title">
+                Высокий уровень технической экспертизы
+              </p>
+              <p class="advantages-block__subtitle">
+                Мы&nbsp;прошли аттестацию в&nbsp;виде тестирования, где показали высокий уровень знаний
+              </p>
+            </li>
+
+            <li class="advantages-block">
+              <div class="advantages-block__image">
+                <img
+                  class="advantages-block__icon"
+                  src="./utils/img/icons/3dcube.svg"
+                />
+              </div>
+              <p class="advantages-block__title">Официальный партнер DELL</p>
+              <p class="advantages-block__subtitle">
+                Официальный поставщик продукции DELL&nbsp;в России и&nbsp;странах СНГ
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Новости -->
+      <section class="section-news">
+        <div class="section-news__inner">
+          <!-- Заголовок -->
+          <div class="section-news__title-block">
+            <div class="title-container">
+              <p class="title-container__title">Последние новости</p>
+              <p class="title-container__subtitle">
+                Вы&nbsp;можете посмотреть ещё больше интересных новостей
+                и&nbsp;узнать о&nbsp;последних новинках, перейдя по&nbsp;кнопке
+              </p>
+            </div>
+            <div class="btn-container">
+              <button class="btn-container__btn"></button>
+              <p class="btn-container__text">Все новости</p>
+            </div>
+          </div>
+          <div class="news">
+            <ul class="news__list">
+              <li class="news__item news-item">
+                <img class="news-item__img" src="./utils/img/img-news-1.jpg" />
+                <div class="news-item__wrapper">
+                  <p class="news-item__title">GE использует технологии Dell</p>
+                  <p class="news-item__subtitle">
+                    Вы можете посмотреть ещё больше интересных
+                  </p>
+                  <button class="news-item__button">→</button>
+                </div>
+                <div class="news-item__date">
+                  <p class="news-item__day">11</p>
+                  <p class="news-item__month">июля</p>
+                </div>
+              </li>
+
+              <li class="news__item news-item">
+                <img class="news-item__img" src="./utils/img/img-news-2.jpg" />
+                <div class="news-item__wrapper">
+                  <p class="news-item__title">GE использует технологии Dell</p>
+                  <p class="news-item__subtitle">
+                    Вы можете посмотреть ещё больше интересных
+                  </p>
+                  <button class="news-item__button">→</button>
+                </div>
+                <div class="news-item__date">
+                  <p class="news-item__day">11</p>
+                  <p class="news-item__month">июля</p>
+                </div>
+              </li>
+
+              <li class="news__item news-item">
+                <img class="news-item__img" src="./utils/img/img-news-3.jpg" />
+                <div class="news-item__wrapper">
+                  <p class="news-item__title">GE использует технологии Dell</p>
+                  <p class="news-item__subtitle">
+                    Вы можете посмотреть ещё больше интересных
+                  </p>
+                  <button class="news-item__button">→</button>
+                </div>
+                <div class="news-item__date">
+                  <p class="news-item__day">11</p>
+                  <p class="news-item__month">июля</p>
+                </div>
+              </li>
+
+              <li class="news__item news-item">
+                <img class="news-item__img" src="./utils/img/img-news-4.jpg" />
+                <div class="news-item__wrapper">
+                  <p class="news-item__title">GE использует технологии Dell</p>
+                  <p class="news-item__subtitle">
+                    Вы можете посмотреть ещё больше интересных
+                  </p>
+                  <button class="news-item__button">→</button>
+                </div>
+                <div class="news-item__date">
+                  <p class="news-item__day">11</p>
+                  <p class="news-item__month">июля</p>
+                </div>
+              </li>
+
+              <li class="news__item news-item">
+                <img class="news-item__img" src="./utils/img/img-news-5.jpg" />
+                <div class="news-item__wrapper">
+                  <p class="news-item__title">GE использует технологии Dell</p>
+                  <p class="news-item__subtitle">
+                    Вы можете посмотреть ещё больше интересных
+                  </p>
+                  <button class="news-item__button">→</button>
+                </div>
+                <div class="news-item__date">
+                  <p class="news-item__day">11</p>
+                  <p class="news-item__month">июля</p>
+                </div>
+              </li>
+
+              <li class="news__item news-item">
+                <img class="news-item__img" src="./utils/img/img-news-6.jpg" />
+                <div class="news-item__wrapper">
+                  <p class="news-item__title">GE использует технологии Dell</p>
+                  <p class="news-item__subtitle">
+                    Вы можете посмотреть ещё больше интересных
+                  </p>
+                  <button class="news-item__button">→</button>
+                </div>
+                <div class="news-item__date">
+                  <p class="news-item__day">11</p>
+                  <p class="news-item__month">июля</p>
+                </div>
+              </li>
             </ul>
           </div>
-        </li>
-        
-        <li class="icons-list__icon icon icon_type_signal">
-          <a class="icon__link" href="#"><img src="./utils/img/signal.svg" /></a>
-        </li>
-        <li class="icons-list__icon icon icon_type_liked">
-          <a class="icon__link" href="#"><img src="./utils/img/heart.svg" /></a>
-        </li>
-        <li class="icons-list__icon icon icon_type_shopping-bag shopping-bag">
-          <a class="icon__link" href="#"><img src="./utils/img/shopping-bag.svg" />
-            <p class="shopping-bag__quantity">3</p>
-          </a>
-        </li>
-        <li class="icons-list__icon icon icon_type_burger-btn burger-btn">
-          <a class="icon__link" href="#">
-            <span class="burger-btn__lines"></span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </header>
-  <main>
-    <!-- Секция с каталогом -->
-    <section class="catalog-section">
-      <div class="catalog-section__content">
-        <ul class="catalog">
-          <li class="catalog-item catalog-item_type_description">
-            <div class="catalog__title-container title-container">
-              <p class="title-container__subtitle">
-                Наша компания является зарегистрированным и официальным
-                партнером Dell в России.
-              </p>
-              <p class="title-container__title">Каталог товаров от Dell</p>
-            </div>
-            <div class="catalog-item__btn-container btn-container">
-              <button class="btn-container__btn"></button>
-              <p class="btn-container__text">В каталог</p>
-            </div>
-          </li>
-
-          <li class="catalog-item">
-            <div class="catalog-item__number">01</div>
-            <img class="catalog-item__img catalog-item__img_type_desktop" alt="Фотография: Ноутбук Dell" src="./utils/img/catalog-desktop.png"/>
-            <div class="catalog-item__title-container">
-              <p class="catalog-item__subtitle">105 товаров</p>
-              <p class="catalog-item__title">Ноутбуки</p>
-            </div>
-          </li>
-
-          <li class="catalog-item">
-            <div class="catalog-item__number">02</div>
-            <img class="catalog-item__img catalog-item__img_type_pc" alt="Фотография: Персональный компьютер Dell" src="./utils/img/catalog-pc.png"/>
-            <div class="catalog-item__title-container">
-              <p class="catalog-item__subtitle">65 товаров</p>
-              <p class="catalog-item__title">Персональные компьютеры</p>
-            </div>
-          </li>
-
-          <li class="catalog-item">
-            <div class="catalog-item__number">03</div>
-            <img class="catalog-item__img catalog-item__img_type_server" alt="Фотография: Сервер Dell" src="./utils/img/catalog-server.png"/>
-            <div class="catalog-item__title-container">
-              <p class="catalog-item__subtitle">13 товаров</p>
-              <p class="catalog-item__title">Cерверы</p>
-            </div>
-          </li>
-
-          <li class="catalog-item">
-            <div class="catalog-item__number">04</div>
-            <img class="catalog-item__img catalog-item__img_type_emc" alt="Фотография: Dell EMC" src="./utils/img/catalog-emc.png"/>
-            <div class="catalog-item__title-container">
-              <p class="catalog-item__subtitle">2345 товаров</p>
-              <p class="catalog-item__title">Dell EMC</p>
-            </div>
-          </li>
-
-          <li class="catalog-item">
-            <div class="catalog-item__number">05</div>
-            <img class="catalog-item__img catalog-item__img_type_emc-parts" alt="Фотография: Запасные части к Dell EMC" src="./utils/img/catalog-emc1.png"/>
-            <div class="catalog-item__title-container">
-              <p class="catalog-item__subtitle">195 товаров</p>
-              <p class="catalog-item__title">Запасные части к Dell EMC</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="advantages">
-      <div class="advantages__content">
-        <img class="advantages__img" src="./utils/img/desktop.png" alt="Фотография ноутбука Dell">
-        <div class="advantages__title-block">
-          <div class="title-container">
-            <p class="title-container__subtitle">
-              Оптимизация мощностей (расходов, социальных выплат и&nbsp;т.п.) позволили компании на&nbsp;4,7% понизить цены по&nbsp;сравнению с&nbsp;конкурентами
-            </p>
-            <p class="title-container__title">Наши преимущества</p>
-          </div>
-          <div class="btn-container">
-            <button class="btn-container__btn"></button>
-            <p class="btn-container__text">Оставить заявку</p>
-          </div>
         </div>
-        
-        <ul class="advantages-blocks">
-          <li class="advantages-block">
-            <div class="advantages-block__image">
-              <img class="advantages-block__icon" src="./utils/img/icons/card-pos.svg" />
-            </div>
-            <p class="advantages-block__title">Самые выгодные и низкие цены</p>
-            <p class="advantages-block__subtitle">
-              В наличии широкий ассортимент, а также доступные цены на ноутбуки
-              Dell
-            </p>
-          </li>
-  
-          <li class="advantages-block">
-            <div class="advantages-block__image">
-              <img class="advantages-block__icon" src="./utils/img/icons/ok.svg" />
-            </div>
-            <p class="advantages-block__title">
-              Авторизованный сервисный центр DELL
-            </p>
-            <p class="advantages-block__subtitle">
-              Сертифицированный сервисный центр по ремонту техники Dell в России
-              и странах СНГ
-            </p>
-          </li>
-  
-          <li class="advantages-block">
-            <div class="advantages-block__image">
-              <img class="advantages-block__icon" src="./utils/img/icons/people.svg" />
-            </div>
-            <p class="advantages-block__title">
-              Высокий уровень технической экспертизы
-            </p>
-            <p class="advantages-block__subtitle">
-              Мы прошли аттестацию в виде тестирования, где показали высокий
-              уровень знаний
-            </p>
-          </li>
-  
-          <li class="advantages-block">
-            <div class="advantages-block__image">
-              <img class="advantages-block__icon" src="./utils/img/icons/3dcube.svg" />
-            </div>
-            <p class="advantages-block__title">Официальный партнер DELL</p>
-            <p class="advantages-block__subtitle">
-              Официальный поставщик продукции DELL в России и странах СНГ
-            </p>
-          </li>
-        </ul>
-      </div>
-      
-    </section>
+      </section>
+    </main>
+    <script>
+      let header = document.querySelector(".header");
+      let burgerBtn = header.querySelector(".burger-btn");
+      let burgerMenu = header.querySelector(".burger-menu");
+      let overlay = document.querySelector(".overlay");
+      let burgerLinks = burgerMenu.querySelectorAll(".menu__link");
 
-  </main>
-  <script>
-    let header = document.querySelector('.header');
-    let burgerBtn = header.querySelector('.burger-btn');
-    let burgerMenu = header.querySelector('.burger-menu');
-    let overlay = document.querySelector('.overlay');
-    let burgerLinks = burgerMenu.querySelectorAll('.menu__link');
+      burgerBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        toggleMenu();
+      });
 
-    burgerBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      toggleMenu();
-    });
+      burgerLinks.forEach((link) => {
+        link.addEventListener("click", () => toggleMenu());
+      });
 
-    burgerLinks.forEach((link) => {
-      link.addEventListener('click', () => toggleMenu());
-    });
+      overlay.addEventListener("click", () => toggleMenu());
 
-    overlay.addEventListener('click', () => toggleMenu());
+      function toggleMenu() {
+        burgerBtn.classList.toggle("burger-btn_active");
 
-    function toggleMenu() {
+        burgerMenu.classList.toggle("burger-menu_active");
 
-      burgerBtn.classList.toggle('burger-btn_active');
-
-      burgerMenu.classList.toggle('burger-menu_active');
-
-      if (burgerMenu.classList.contains('burger-menu_active')) {
-        overlay.classList.add('overlay_active');
-      } else {
-        overlay.classList.remove('overlay_active');
+        if (burgerMenu.classList.contains("burger-menu_active")) {
+          overlay.classList.add("overlay_active");
+        } else {
+          overlay.classList.remove("overlay_active");
+        }
       }
-    }
-
-
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
