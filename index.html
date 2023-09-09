@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Тестовое задание front-end(верстка)">
-    <meta name="author" content="Гасай Елизавета">
+    <meta name="description" content="Тестовое задание front-end(верстка)" />
+    <meta name="author" content="Гасай Елизавета" />
     <title>Тестовое</title>
-    <link rel="icon" type="image/x-icon" href="./utils/img/logo.svg">
+    <link rel="icon" type="image/x-icon" href="./utils/img/logo.svg" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
@@ -87,6 +87,58 @@
       </div>
     </header>
     <main>
+      <!-- Секция первого экрана со слайдером -->
+      <section class="first-screen">
+        <div class="first-screen__inner">
+          <p class="first-screen__background-title"></p>
+          <div class="first-screen__swiper-hint swiper-hint">
+            <img src="./utils/img/mouse.svg" class="swiper-hint__img" />
+            <p class="swiper-hint__text">Scroll to catalog</p>
+          </div>
+          <div class="first-screen__content">
+            <div class="first-screen__title-container title-container">
+              <p class="title-container__subtitle">Новое поступление</p>
+              <p class="title-container__title">
+                Лучшие товары от компании Dell
+              </p>
+            </div>
+            <div class="first-screen__btn-container btn-container">
+              <button class="btn-container__btn"></button>
+              <p class="btn-container__text">Подробнее</p>
+            </div>
+          </div>
+          <div></div>
+
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img class="swiper__image" src="./utils/img/slider-img.png" />
+              </div>
+              <div class="swiper-slide">
+                <img class="swiper__image" src="./utils/img/slider-img.png" />
+              </div>
+              <div class="swiper-slide">
+                <img class="swiper__image" src="./utils/img/slider-img.png" />
+              </div>
+              <div class="swiper-slide">
+                <img class="swiper__image" src="./utils/img/slider-img.png" />
+              </div>
+              <div class="swiper-slide">
+                <img class="swiper__image" src="./utils/img/slider-img.png" />
+              </div>
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-next"></div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
       <!-- Секция с каталогом -->
       <section class="catalog-section">
         <div class="catalog-section__content">
@@ -626,7 +678,6 @@
       overlay.addEventListener("click", () => toggleMenu());
 
       function toggleMenu() {
-
         header.classList.toggle("header_fixed");
         burgerBtn.classList.toggle("burger-btn_active");
 
@@ -638,6 +689,27 @@
           overlay.classList.remove("overlay_active");
         }
       }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        dynamicBullets: true,
+        dynamicMainBullets: 1,
+        direction: "horizontal",
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        keyboard: {
+          enabled: true,
+        },
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+        },
+      });
     </script>
   </body>
 </html>
