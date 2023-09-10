@@ -7,7 +7,10 @@
   overflow-x: hidden;
 }
 
-.page__content {
+.link {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .overlay {
@@ -444,6 +447,7 @@
 }
 
 .btn-container__btn {
+  cursor: pointer;
   width: 55px;
   height: 55px;
   background-color: #33a9ff;
