@@ -350,7 +350,7 @@
   box-sizing: border-box;
   width: 100%;
   max-width: 573px;
-  z-index: 10;
+  z-index: 1;
 }
 
 .first-screen__background-title {
@@ -545,7 +545,7 @@
 
 .first-screen__swiper-text {
   position: absolute;
-  z-index: 10;
+  z-index: 1;
   color: #292d32;
   font-family: Roboto;
   font-size: 25px;
@@ -1298,7 +1298,7 @@
 }
 
 .footer__logo {
-  z-index: 10;
+  z-index: 1;
   margin: 29px 0 0;
 }
 
